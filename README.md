@@ -1,2 +1,2 @@
 # CursoAyla2023_AppEscritorio
-Aplicaciones de escritorio
+Curso Ayla 2023 - Aplicaciones de escritorio
