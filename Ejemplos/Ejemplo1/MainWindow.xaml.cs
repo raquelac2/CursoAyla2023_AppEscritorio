@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PersonasLIB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace Ejemplo1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            string pipo = "hola mundo";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string pipo = "hola mundo";
+            Persona pipo = new Persona();
         }
     }
 }
