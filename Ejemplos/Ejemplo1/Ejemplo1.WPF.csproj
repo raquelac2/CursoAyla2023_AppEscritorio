@@ -6,8 +6,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\PersonasLIB\PersonasLIB.csproj" />
-  </ItemGroup>
-
 </Project>

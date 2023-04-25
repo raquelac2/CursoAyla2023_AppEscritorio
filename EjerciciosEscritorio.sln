@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo1", "Ejemplos\Ejemplo1\Ejemplo1.csproj", "{E4A4D75A-9492-4ED1-A223-7F15EFD78E5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo1.WPF", "Ejemplos\Ejemplo1\Ejemplo1.WPF.csproj", "{E4A4D75A-9492-4ED1-A223-7F15EFD78E5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo1b", "Ejemplo1b\Ejemplo1b.csproj", "{BA8BFC2B-1F3C-42FE-A460-B24A16CB5382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo1b.WF", "Ejemplo1b\Ejemplo1b.WF.csproj", "{BA8BFC2B-1F3C-42FE-A460-B24A16CB5382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
