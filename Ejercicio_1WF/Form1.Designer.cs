@@ -47,7 +47,6 @@
             lblID.Size = new Size(24, 15);
             lblID.TabIndex = 0;
             lblID.Text = "ID: ";
-            lblID.Click += lblID_Click;
             // 
             // txtID
             // 
@@ -64,7 +63,6 @@
             lblMarca.Size = new Size(46, 15);
             lblMarca.TabIndex = 2;
             lblMarca.Text = "Marca: ";
-            lblMarca.Click += lblMarca_Click;
             // 
             // txtMarca
             // 
@@ -81,7 +79,6 @@
             lblModelo.Size = new Size(51, 15);
             lblModelo.TabIndex = 4;
             lblModelo.Text = "Modelo:";
-            lblModelo.Click += lblModelo_Click;
             // 
             // txtModelo
             // 
@@ -98,6 +95,7 @@
             btnAddCoche.TabIndex = 6;
             btnAddCoche.Text = "Añadir Coche";
             btnAddCoche.UseVisualStyleBackColor = true;
+            btnAddCoche.Click += btnAddCoche_Click;
             // 
             // cboCoches
             // 
