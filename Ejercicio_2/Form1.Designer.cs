@@ -47,15 +47,15 @@
             btnBorrar = new Button();
             btnDecimal = new Button();
             textBox1 = new TextBox();
-            txtTotal = new TextBox();
+            txtAcumulado = new TextBox();
             SuspendLayout();
             // 
             // txtResultado
             // 
             txtResultado.BackColor = Color.White;
             txtResultado.BorderStyle = BorderStyle.FixedSingle;
-            txtResultado.ForeColor = Color.Red;
-            txtResultado.Location = new Point(16, 29);
+            txtResultado.ForeColor = SystemColors.ActiveCaptionText;
+            txtResultado.Location = new Point(17, 29);
             txtResultado.MaxLength = 20;
             txtResultado.Name = "txtResultado";
             txtResultado.ReadOnly = true;
@@ -244,22 +244,24 @@
             textBox1.TabIndex = 19;
             textBox1.TextAlign = HorizontalAlignment.Right;
             // 
-            // txtTotal
+            // txtAcumulado
             // 
-            txtTotal.Location = new Point(16, 58);
-            txtTotal.Name = "txtTotal";
-            txtTotal.ReadOnly = true;
-            txtTotal.Size = new Size(240, 23);
-            txtTotal.TabIndex = 20;
-            txtTotal.TabStop = false;
-            txtTotal.TextAlign = HorizontalAlignment.Right;
+            txtAcumulado.BorderStyle = BorderStyle.None;
+            txtAcumulado.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAcumulado.Location = new Point(17, 58);
+            txtAcumulado.Name = "txtAcumulado";
+            txtAcumulado.ReadOnly = true;
+            txtAcumulado.Size = new Size(240, 16);
+            txtAcumulado.TabIndex = 20;
+            txtAcumulado.TabStop = false;
+            txtAcumulado.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(269, 277);
-            Controls.Add(txtTotal);
+            Controls.Add(txtAcumulado);
             Controls.Add(textBox1);
             Controls.Add(btnDecimal);
             Controls.Add(btnBorrar);
@@ -314,6 +316,6 @@
         private Button btnBorrar;
         private Button btnDecimal;
         private TextBox textBox1;
-        private TextBox txtTotal;
+        private TextBox txtAcumulado;
     }
 }

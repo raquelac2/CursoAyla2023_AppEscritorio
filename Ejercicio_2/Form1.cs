@@ -8,9 +8,8 @@ namespace Ejercicio_2
     /// </summary>
     public partial class Form1 : Form
     {
-        public decimal Resultado { get; set; }
+        public decimal Acumulado { get; set; }
         public decimal Numero1 { get; set; }
-        public decimal Numero2 { get; set; }
         public Operador? Operacion { get; set; }
 
 
@@ -19,7 +18,7 @@ namespace Ejercicio_2
             InitializeComponent();
 
             txtResultado.Text = string.Empty;
-            txtTotal.Text = "0";
+            txtAcumulado.Text = "0";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,6 +29,9 @@ namespace Ejercicio_2
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             txtResultado.Text = string.Empty;
+            txtAcumulado.Text = "0";
+            Numero1 = 0;
+            Acumulado = 0;
 
 
         }
@@ -116,7 +118,7 @@ namespace Ejercicio_2
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (txtResultado.Text == string.Empty")
+            if (txtResultado.Text == string.Empty)
 
                 txtResultado.Text = "9";
 
@@ -154,16 +156,13 @@ namespace Ejercicio_2
             if (txtResultado.Text != string.Empty)
             {
                 Operacion = Operador.Mas;
-                if (Numero1 == 0)
-                {
-                    Numero1 = Convert.ToDecimal(txtResultado.Text);
-                    txtResultado.Text = string.Empty;
-                }
 
-                else
-                {
-                    Calcular();
-                }
+                Numero1 = Convert.ToDecimal(txtResultado.Text);
+                Acumulado += Numero1;
+
+                txtAcumulado.Text = Acumulado.ToString();
+                txtResultado.Text = string.Empty;
+
             }
 
 
@@ -176,16 +175,17 @@ namespace Ejercicio_2
             {
                 Operacion = Operador.Menos;
 
-                if (Numero1 == 0)
-                {
-                    Numero1 = Convert.ToDecimal(txtResultado.Text);
-                    txtResultado.Text = string.Empty;
-                }
+                Numero1 = Convert.ToDecimal(txtResultado.Text);
+
+                if (txtAcumulado.Text =="0")
+                    Acumulado = Numero1;
 
                 else
-                {
-                    Calcular();
-                }
+                Acumulado -= Numero1;
+
+                txtAcumulado.Text = Acumulado.ToString();
+                txtResultado.Text = string.Empty;
+
             }
 
 
@@ -198,16 +198,16 @@ namespace Ejercicio_2
             {
                 Operacion = Operador.Por;
 
-                if (Numero1 == 0)
-                {
-                    Numero1 = Convert.ToDecimal(txtResultado.Text);
-                    txtResultado.Text = string.Empty;
-                }
-
+                Numero1 = Convert.ToDecimal(txtResultado.Text);
+                if (Acumulado != 0)
+                    Acumulado *= Numero1;
                 else
-                {
-                    Calcular();
-                }
+                    Acumulado = Numero1;
+
+
+                txtAcumulado.Text = Acumulado.ToString();
+                txtResultado.Text = string.Empty;
+
             }
 
 
@@ -220,16 +220,16 @@ namespace Ejercicio_2
             {
                 Operacion = Operador.Dividir;
 
-                if (Numero1 == 0)
-                {
-                    Numero1 = Convert.ToDecimal(txtResultado.Text);
-                    txtResultado.Text = string.Empty;
-                }
+                Numero1 = Convert.ToDecimal(txtResultado.Text);
+                if (Acumulado != 0)
+                Acumulado /= Numero1;
 
                 else
-                {
-                    Calcular();
-                }
+                    Acumulado = Numero1;
+
+                txtAcumulado.Text = Acumulado.ToString();
+                txtResultado.Text = string.Empty;
+
             }
 
 
@@ -237,46 +237,41 @@ namespace Ejercicio_2
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            Calcular();
 
-            Operacion = null;
-            Numero1 = 0;
-            Numero2 = 0;
-        }
-        private void Calcular()
-        {
-            if (Numero1 != 0 && Operacion != null && txtResultado.Text != string.Empty)
+            if (txtResultado.Text != string.Empty)
             {
-                Numero2 = Convert.ToDecimal(txtResultado.Text);
+
+                Numero1 = Convert.ToDecimal(txtResultado.Text);
 
                 switch (Operacion)
                 {
-                    case Operador.Por:
-                        Resultado = Numero1 * Numero2;
-                        break;
-                    case Operador.Dividir:
-                        if (Numero2 != 0)
-                            Resultado = Numero1 / Numero2;
-                        break;
                     case Operador.Mas:
-                        Resultado = Numero1 + Numero2;
+                        Acumulado += Numero1;
                         break;
                     case Operador.Menos:
-                        Resultado = Numero1 - Numero2;
+                        Acumulado -= Numero1;
                         break;
+                    case Operador.Por:
+                        Acumulado *= Numero1;
+                        break;
+                    case Operador.Dividir:
+                        Acumulado /= Numero1;
+                        break;
+
                     default:
-                        MessageBox.Show("No se puede realizar su operación");
                         break;
+
                 }
-                txtResultado.Text = Resultado.ToString();
-
+                txtAcumulado.Text = "0";
+                txtResultado.Text = Acumulado.ToString();
+                Acumulado = 0;
+                Operacion = null;
+                Numero1 = 0;
             }
+            Operacion = null;
+            Numero1 = 0;
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
