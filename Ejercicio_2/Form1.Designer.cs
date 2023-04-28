@@ -290,7 +290,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             TopMost = true;
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
