@@ -1,4 +1,4 @@
-namespace Ejemplo_3
+namespace Ejemplo3
 {
     internal static class Program
     {

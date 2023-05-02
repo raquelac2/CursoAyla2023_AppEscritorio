@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejemplo_3
+namespace Ejemplo3
 {
     public partial class Form2 : Form
     {
         public Form2()
         {
             InitializeComponent();
+            lblMensaje.Text = "Buenas tardes del viernes";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVerFormulario_Click(object sender, EventArgs e)
         {
             nuevaVentanaToolStripMenuItem.Enabled = false;
 
@@ -25,10 +26,6 @@ namespace Ejemplo_3
             frmFormulario.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,20 +34,10 @@ namespace Ejemplo_3
 
         private void nuevaVentanaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            btnNuevoFormulario.Enabled = false;
+            btnVerFormulario.Enabled = false;
 
             Form1 frmFormulario = new Form1();
             frmFormulario.Show();
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void statusStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }

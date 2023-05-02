@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejemplo_3
+namespace Ejemplo3
 {
     public partial class FormularioMDI : Form
     {
@@ -17,7 +17,7 @@ namespace Ejemplo_3
             InitializeComponent();
         }
 
-        private void mnuSalir_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
             //this.Close();
@@ -39,11 +39,16 @@ namespace Ejemplo_3
 
         private void formulario3ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             Form3 frmFormulario3 = new Form3();
             frmFormulario3.MdiParent = this;
             frmFormulario3.Show();
+        }
 
+        private void formulario4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 frmFormulario4 = new Form4();
+            frmFormulario4.MdiParent = this;
+            frmFormulario4.Show();
         }
     }
 }

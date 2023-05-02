@@ -23,6 +23,9 @@ namespace Ejemplo_4WF
             miFila["Apellidos"] = "Lopez";
             miFila["Edad"] = 34;
 
+            miTabla.Rows.Add(miFila);
+
+
         }
     }
 }
