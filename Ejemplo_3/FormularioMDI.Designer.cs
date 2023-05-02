@@ -33,6 +33,7 @@
             mnuFormulario1 = new ToolStripMenuItem();
             mnuFormulario2 = new ToolStripMenuItem();
             mnuSalir = new ToolStripMenuItem();
+            formulario3ToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // 
             // formulariosToolStripMenuItem
             // 
-            formulariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuFormulario1, mnuFormulario2 });
+            formulariosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mnuFormulario1, mnuFormulario2, formulario3ToolStripMenuItem });
+            formulariosToolStripMenuItem.MergeIndex = 0;
             formulariosToolStripMenuItem.Name = "formulariosToolStripMenuItem";
             formulariosToolStripMenuItem.Size = new Size(82, 20);
             formulariosToolStripMenuItem.Text = "Formularios";
@@ -68,10 +70,18 @@
             // 
             // mnuSalir
             // 
+            mnuSalir.MergeIndex = 2;
             mnuSalir.Name = "mnuSalir";
             mnuSalir.Size = new Size(41, 20);
             mnuSalir.Text = "Salir";
             mnuSalir.Click += mnuSalir_Click;
+            // 
+            // formulario3ToolStripMenuItem
+            // 
+            formulario3ToolStripMenuItem.Name = "formulario3ToolStripMenuItem";
+            formulario3ToolStripMenuItem.Size = new Size(180, 22);
+            formulario3ToolStripMenuItem.Text = "Formulario 3";
+            formulario3ToolStripMenuItem.Click += formulario3ToolStripMenuItem_Click;
             // 
             // FormularioMDI
             // 
@@ -96,5 +106,6 @@
         private ToolStripMenuItem mnuFormulario1;
         private ToolStripMenuItem mnuFormulario2;
         private ToolStripMenuItem mnuSalir;
+        private ToolStripMenuItem formulario3ToolStripMenuItem;
     }
 }

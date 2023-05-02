@@ -19,7 +19,8 @@ namespace Ejemplo_3
 
         private void mnuSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+            //this.Close();
         }
 
         private void mnuFormulario1_Click(object sender, EventArgs e)
@@ -34,6 +35,15 @@ namespace Ejemplo_3
             Form2 frmFormulario2 = new Form2();
             frmFormulario2.MdiParent = this;
             frmFormulario2.Show();
+        }
+
+        private void formulario3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form3 frmFormulario3 = new Form3();
+            frmFormulario3.MdiParent = this;
+            frmFormulario3.Show();
+
         }
     }
 }

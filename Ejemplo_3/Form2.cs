@@ -32,7 +32,7 @@ namespace Ejemplo_3
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void nuevaVentanaToolStripMenuItem_Click(object sender, EventArgs e)

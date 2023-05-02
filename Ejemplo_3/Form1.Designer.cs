@@ -36,6 +36,11 @@
             monthCalendar1 = new MonthCalendar();
             btnVerFechas = new Button();
             btnCerrar = new Button();
+            groupBox1 = new GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            maskedTextBox2 = new MaskedTextBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // chkMiControl
@@ -76,7 +81,7 @@
             // radioBoton2
             // 
             radioBoton2.AutoSize = true;
-            radioBoton2.Location = new Point(338, 148);
+            radioBoton2.Location = new Point(338, 130);
             radioBoton2.Name = "radioBoton2";
             radioBoton2.Size = new Size(120, 19);
             radioBoton2.TabIndex = 3;
@@ -123,11 +128,57 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click_1;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Location = new Point(90, 281);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(200, 100);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Carnet de conducir";
+            groupBox1.Enter += groupBox1_Enter;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(23, 56);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(88, 19);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Motocicleta";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(23, 31);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(59, 19);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Coche";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // maskedTextBox2
+            // 
+            maskedTextBox2.Location = new Point(610, 137);
+            maskedTextBox2.Mask = "00/00/0000";
+            maskedTextBox2.Name = "maskedTextBox2";
+            maskedTextBox2.Size = new Size(100, 23);
+            maskedTextBox2.TabIndex = 10;
+            maskedTextBox2.TextMaskFormat = MaskFormat.IncludePrompt;
+            maskedTextBox2.ValidatingType = typeof(DateTime);
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(maskedTextBox2);
+            Controls.Add(groupBox1);
             Controls.Add(btnCerrar);
             Controls.Add(btnVerFechas);
             Controls.Add(monthCalendar1);
@@ -138,6 +189,8 @@
             Controls.Add(chkMiControl);
             Name = "Form1";
             Text = "Form1";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -152,5 +205,9 @@
         private MonthCalendar monthCalendar1;
         private Button btnVerFechas;
         private Button btnCerrar;
+        private GroupBox groupBox1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private MaskedTextBox maskedTextBox2;
     }
 }

@@ -76,6 +76,8 @@
             // abrirVentanaToolStripMenuItem
             // 
             abrirVentanaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaVentanaToolStripMenuItem, editarTextoToolStripMenuItem });
+            abrirVentanaToolStripMenuItem.MergeAction = MergeAction.Insert;
+            abrirVentanaToolStripMenuItem.MergeIndex = 1;
             abrirVentanaToolStripMenuItem.Name = "abrirVentanaToolStripMenuItem";
             abrirVentanaToolStripMenuItem.Size = new Size(90, 20);
             abrirVentanaToolStripMenuItem.Text = "Abrir Ventana";
@@ -83,18 +85,19 @@
             // nuevaVentanaToolStripMenuItem
             // 
             nuevaVentanaToolStripMenuItem.Name = "nuevaVentanaToolStripMenuItem";
-            nuevaVentanaToolStripMenuItem.Size = new Size(153, 22);
+            nuevaVentanaToolStripMenuItem.Size = new Size(180, 22);
             nuevaVentanaToolStripMenuItem.Text = "Nueva ventana";
             nuevaVentanaToolStripMenuItem.Click += nuevaVentanaToolStripMenuItem_Click;
             // 
             // editarTextoToolStripMenuItem
             // 
             editarTextoToolStripMenuItem.Name = "editarTextoToolStripMenuItem";
-            editarTextoToolStripMenuItem.Size = new Size(153, 22);
+            editarTextoToolStripMenuItem.Size = new Size(180, 22);
             editarTextoToolStripMenuItem.Text = "Editar texto";
             // 
             // salirToolStripMenuItem
             // 
+            salirToolStripMenuItem.MergeAction = MergeAction.MatchOnly;
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             salirToolStripMenuItem.Size = new Size(41, 20);
             salirToolStripMenuItem.Text = "Salir";
