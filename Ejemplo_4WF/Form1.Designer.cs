@@ -29,45 +29,50 @@
         private void InitializeComponent()
         {
             btnGenerar = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvDatosPersonas = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvDatosPersonas).BeginInit();
             SuspendLayout();
             // 
             // btnGenerar
             // 
-            btnGenerar.Location = new Point(52, 30);
+            btnGenerar.Location = new Point(74, 50);
+            btnGenerar.Margin = new Padding(4, 5, 4, 5);
             btnGenerar.Name = "btnGenerar";
-            btnGenerar.Size = new Size(75, 23);
+            btnGenerar.Size = new Size(107, 38);
             btnGenerar.TabIndex = 0;
             btnGenerar.Text = "Generar";
             btnGenerar.UseVisualStyleBackColor = true;
             btnGenerar.Click += btnGenerar_Click;
             // 
-            // dataGridView1
+            // dgvDatosPersonas
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(52, 81);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(729, 301);
-            dataGridView1.TabIndex = 1;
+            dgvDatosPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatosPersonas.Location = new Point(74, 135);
+            dgvDatosPersonas.Margin = new Padding(4, 5, 4, 5);
+            dgvDatosPersonas.Name = "dgvDatosPersonas";
+            dgvDatosPersonas.RowHeadersWidth = 62;
+            dgvDatosPersonas.RowTemplate.Height = 25;
+            dgvDatosPersonas.Size = new Size(1041, 502);
+            dgvDatosPersonas.TabIndex = 1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(1143, 750);
+            Controls.Add(dgvDatosPersonas);
             Controls.Add(btnGenerar);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvDatosPersonas).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnGenerar;
-        private DataGridView dataGridView1;
+        private DataGridView dgvDatosPersonas;
     }
 }
