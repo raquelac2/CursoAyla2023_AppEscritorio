@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo_2", "Ejemplo_2\Ejem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio_2WF", "Ejercicio_2\Ejercicio_2WF.csproj", "{CA02A75B-3211-47E6-8DD0-B85D05648E55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo_3", "Ejemplo_3\Ejemplo_3.csproj", "{D568EDE7-2F2C-4496-BBFC-927FE8116E0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo_3WF", "Ejemplo_3\Ejemplo_3WF.csproj", "{D568EDE7-2F2C-4496-BBFC-927FE8116E0D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo_4WF", "Ejemplo_4WF\Ejemplo_4WF.csproj", "{A2E07C83-7BCC-4FF3-9E51-6D06C1A0501B}"
 EndProject

@@ -44,6 +44,11 @@ namespace Ejemplo_4WF
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            dgvDatosPersonas.DataSource = miTabla;
+
+
         }
+
+
     }
 }
