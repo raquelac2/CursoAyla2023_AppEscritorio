@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio_1WF", "Ejercicio_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_LIBCoches", "_LIBCoches\_LIBCoches.csproj", "{59B8E7E6-4519-4A65-A0A0-07D1D255607E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo_2", "Ejemplo_2\Ejemplo_2.csproj", "{BCB442F4-28BF-4E68-96DA-6D6DB6E1ADD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejemplo_2WF", "Ejemplo_2\Ejemplo_2WF.csproj", "{BCB442F4-28BF-4E68-96DA-6D6DB6E1ADD2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio_2WF", "Ejercicio_2\Ejercicio_2WF.csproj", "{CA02A75B-3211-47E6-8DD0-B85D05648E55}"
 EndProject
