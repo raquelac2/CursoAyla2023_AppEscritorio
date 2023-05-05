@@ -3,14 +3,10 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Ejercicio_3</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Ejercicio_3_LIB\Ejercicio_3_LIB.csproj" />
-    <ProjectReference Include="..\_LIBGeoClases\_LIBGeoClases.csproj" />
-  </ItemGroup>
 
 </Project>

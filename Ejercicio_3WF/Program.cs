@@ -1,4 +1,4 @@
-namespace Ejercicio_3WF
+namespace Ejercicio_3
 {
     internal static class Program
     {
