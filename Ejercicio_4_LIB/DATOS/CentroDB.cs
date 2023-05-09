@@ -15,7 +15,7 @@ namespace Ejercicio_4_LIB.DATOS
 
         public long GuardarCentro(Centro centro)
         {
-            long resultado;
+            long ID;
            
             string SQL = "INSERT INTO Tabla_Centro (Nombre, PoblacionId, Direccion, CP)" +
                           "VALUES   (?, ?, ?, ?)";
@@ -53,11 +53,11 @@ namespace Ejercicio_4_LIB.DATOS
                
                 DataTable tabla = new DataTable();
                 tabla.Load(reader);
-                resultado = Convert.ToInt64(tabla.Rows[0][0]);
+                ID = Convert.ToInt64(tabla.Rows[0][0]);
 
                 conexion.Close();
             }
-            return resultado; 
+            return ID; 
 
         }
      

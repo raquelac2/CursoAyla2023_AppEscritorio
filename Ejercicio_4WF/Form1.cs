@@ -138,6 +138,12 @@ namespace Ejercicio_4
                     PoblacionId = poblacion.Id
                 };
 
+                Centro temp = new Centro();
+                centro = temp.GuardarCentroEnBBDD(centro);
+
+                MessageBox.Show(centro.Id.ToString());
+              
+
                 MessageBox.Show("Centro creado correctamente", "Centro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
