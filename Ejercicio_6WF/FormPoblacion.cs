@@ -9,20 +9,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejercicio_6
+namespace Ejercicio_6WF
 {
     public partial class FormPoblacion : Form
     {
-        public int MunicipioId { get; set; }
-
+        public int MunicipioID { get; set; }
         public FormPoblacion(int IDMunicipio)
         {
             InitializeComponent();
 
-            MunicipioId = IDMunicipio;
+            MunicipioID = IDMunicipio;
+
             Poblacion miPoblacion = new Poblacion();
-            List<Poblacion> Poblaciones = miPoblacion.GetPoblacionPorMunicipioId_Negocio(MunicipioId);
-            dgvPoblaciones.DataSource = Poblaciones;
+            List<Poblacion> poblaciones = miPoblacion.GetPoblacionPorMunicipioId_Negocio(MunicipioID);
+            dgvPoblaciones.DataSource = poblaciones;
         }
+
+
     }
 }

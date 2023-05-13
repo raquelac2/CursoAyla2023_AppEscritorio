@@ -30,8 +30,13 @@
         {
             lblComunidad = new Label();
             cboComunidad = new ComboBox();
-            lblProvincia = new Label();
-            cboProvincia = new ComboBox();
+            gbProvincias = new GroupBox();
+            lbProvincias = new ListBox();
+            gbMunicipios = new GroupBox();
+            dgvMunicipios = new DataGridView();
+            gbProvincias.SuspendLayout();
+            gbMunicipios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMunicipios).BeginInit();
             SuspendLayout();
             // 
             // lblComunidad
@@ -51,22 +56,45 @@
             cboComunidad.Size = new Size(168, 23);
             cboComunidad.TabIndex = 1;
             // 
-            // lblProvincia
+            // gbProvincias
             // 
-            lblProvincia.AutoSize = true;
-            lblProvincia.Location = new Point(293, 9);
-            lblProvincia.Name = "lblProvincia";
-            lblProvincia.Size = new Size(62, 15);
-            lblProvincia.TabIndex = 2;
-            lblProvincia.Text = "Provincia: ";
+            gbProvincias.Controls.Add(lbProvincias);
+            gbProvincias.Location = new Point(24, 64);
+            gbProvincias.Name = "gbProvincias";
+            gbProvincias.Size = new Size(238, 312);
+            gbProvincias.TabIndex = 2;
+            gbProvincias.TabStop = false;
+            gbProvincias.Text = "Provincias";
             // 
-            // cboProvincia
+            // lbProvincias
             // 
-            cboProvincia.FormattingEnabled = true;
-            cboProvincia.Location = new Point(366, 9);
-            cboProvincia.Name = "cboProvincia";
-            cboProvincia.Size = new Size(184, 23);
-            cboProvincia.TabIndex = 3;
+            lbProvincias.FormattingEnabled = true;
+            lbProvincias.ItemHeight = 15;
+            lbProvincias.Location = new Point(12, 17);
+            lbProvincias.Name = "lbProvincias";
+            lbProvincias.Size = new Size(212, 289);
+            lbProvincias.TabIndex = 0;
+            lbProvincias.SelectedIndexChanged += lbProvincias_SelectedIndexChanged;
+            // 
+            // gbMunicipios
+            // 
+            gbMunicipios.Controls.Add(dgvMunicipios);
+            gbMunicipios.Location = new Point(285, 64);
+            gbMunicipios.Name = "gbMunicipios";
+            gbMunicipios.Size = new Size(269, 312);
+            gbMunicipios.TabIndex = 3;
+            gbMunicipios.TabStop = false;
+            gbMunicipios.Text = "Municipios";
+            // 
+            // dgvMunicipios
+            // 
+            dgvMunicipios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMunicipios.Location = new Point(6, 17);
+            dgvMunicipios.Name = "dgvMunicipios";
+            dgvMunicipios.RowTemplate.Height = 25;
+            dgvMunicipios.Size = new Size(257, 289);
+            dgvMunicipios.TabIndex = 0;
+            dgvMunicipios.CellDoubleClick += dgvMunicipios_CellDoubleClick;
             // 
             // FormPrincipal
             // 
@@ -74,13 +102,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightCyan;
             ClientSize = new Size(588, 398);
-            Controls.Add(cboProvincia);
-            Controls.Add(lblProvincia);
+            Controls.Add(gbMunicipios);
+            Controls.Add(gbProvincias);
             Controls.Add(cboComunidad);
             Controls.Add(lblComunidad);
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormPrincipal";
+            gbProvincias.ResumeLayout(false);
+            gbMunicipios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvMunicipios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -89,7 +120,9 @@
 
         private Label lblComunidad;
         private ComboBox cboComunidad;
-        private Label lblProvincia;
-        private ComboBox cboProvincia;
+        private GroupBox gbProvincias;
+        private ListBox lbProvincias;
+        private GroupBox gbMunicipios;
+        private DataGridView dgvMunicipios;
     }
 }
